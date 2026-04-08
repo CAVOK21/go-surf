@@ -1,0 +1,2369 @@
+﻿@charset "UTF-8";
+/* Указываем box sizing */
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+/* Убираем внешние отступы */
+body,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a:link,
+a:visited {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+body {
+  background: #171919;
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 400;
+  color: #ffffff;
+}
+
+.section-wrapper {
+  height: 100%;
+  max-width: 1480px;
+  padding: 0 20px;
+  margin: 150px auto;
+  position: relative;
+}
+
+.title-wrapper {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  text-align: right;
+  right: 20px;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.subtitle {
+  position: relative;
+  font-size: 22px;
+  line-height: 145%;
+  letter-spacing: 7.33333px;
+  text-transform: uppercase;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding-left: 110px;
+}
+.subtitle::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 0;
+  width: 80px;
+  height: 2px;
+  background: #ffffff;
+  opacity: 0.5;
+}
+
+.title {
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 180%;
+  text-transform: uppercase;
+}
+.title__span {
+  font-weight: 100;
+  padding: 0 5px;
+}
+
+.section-title {
+  position: relative;
+  font-weight: 800;
+  font-size: 80px;
+  line-height: 150%;
+  text-transform: uppercase;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-left: 15%;
+}
+.section-title::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 80px;
+  height: 1px;
+  background-color: #4af6cd;
+}
+.section-title::after {
+  content: "";
+  text-transform: uppercase;
+  position: absolute;
+  font-weight: 800;
+  font-size: 250%;
+  line-height: 78%;
+  color: #ffffff;
+  mix-blend-mode: normal;
+  opacity: 0.02;
+  top: 40%;
+  right: 5%;
+}
+.section-title__surf::after {
+  content: "surf";
+}
+.section-title__travel::after {
+  content: "travel";
+}
+.section-title__sleep::after {
+  content: "sleep";
+}
+.section-title__shop::after {
+  content: "shop";
+}
+
+.btn-box__title {
+  font-weight: 800;
+  font-size: 40px;
+  text-transform: uppercase;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  margin: 0 auto;
+  cursor: pointer;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  line-height: 100%;
+}
+.btn-box__title-span {
+  position: relative;
+  background-color: rgba(75, 247, 206, 0.2509803922);
+  padding: 15px 57px 15px 15px;
+  margin-left: 15px;
+}
+.btn-box__title-span::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 20px;
+  height: 1px;
+  left: -10px;
+  background-color: #fff;
+}
+.btn-box__title-span::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 21px;
+  top: 50%;
+  background-image: url(https://vl-shevchenko.github.io/gosurf/images/arrow-right.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  margin-right: 15px;
+  right: 0;
+}
+
+.btn-box__title:hover .btn-box__title-span {
+  background-color: #4af6cd;
+}
+
+.slider__img {
+  max-width: 1116px;
+  min-width: 240px;
+  width: 100%;
+  max-height: 780px;
+  min-height: 168px;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transform: translateX(-50px);
+      -ms-transform: translateX(-50px);
+          transform: translateX(-50px);
+  opacity: 0.7;
+}
+.slider__block-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  gap: 57px;
+  margin-bottom: 70px;
+}
+.slider__title-wrapper {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 100px;
+}
+.slider__subtitle {
+  padding-right: 110px;
+  padding-left: 0;
+}
+.slider__subtitle::before {
+  right: 0;
+  left: auto;
+}
+.slider__title {
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding-right: 100%;
+}
+.slider__title::after {
+  position: absolute;
+  content: "★★★★★";
+  font-size: 80%;
+  right: 0;
+  color: #4af6cd;
+  letter-spacing: 8px;
+  text-shadow: 0px 0px 16px rgba(74, 246, 205, 0.54);
+}
+.slider__infoblock-wrapper {
+  margin-top: -15%;
+}
+.slider__infoblock {
+  height: 187px;
+  width: 282px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 18px;
+}
+.slider__infoblock-subtitle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 8px;
+  opacity: 0.5;
+  text-transform: uppercase;
+  color: #ffffff;
+  -webkit-transform: rotate(-180deg);
+      -ms-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+  white-space: nowrap;
+}
+.slider__infoblock-title {
+  font-family: "Fira Sans";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 40px;
+  text-transform: uppercase;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  text-align: left;
+}
+.slider__result {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  gap: 5px;
+}
+.slider__result::after {
+  content: "";
+  font-family: "Fira Sans";
+  font-style: normal;
+  font-weight: 400;
+  position: absolute;
+  font-size: 14px;
+  line-height: 257%;
+  text-align: right;
+  letter-spacing: 5.25px;
+  text-transform: uppercase;
+  mix-blend-mode: normal;
+  opacity: 0.75;
+  -webkit-transform: translateY(100%);
+      -ms-transform: translateY(100%);
+          transform: translateY(100%);
+  bottom: 0;
+  right: 0;
+}
+
+.header__title {
+  position: absolute;
+  width: 500px;
+  left: 0;
+  top: 1%;
+  z-index: 1;
+  font-weight: 800;
+  font-size: 200px;
+  line-height: 78%;
+  text-transform: uppercase;
+  opacity: 0.05;
+}
+.header__map-svg {
+  position: absolute;
+  width: 38%;
+  max-width: 635px;
+  z-index: 2;
+  right: 0;
+  top: 0;
+  height: 40%;
+  min-height: 310px;
+}
+
+.line-animation {
+  stroke-dasharray: 600;
+  stroke-dashoffset: 600;
+  -webkit-animation: animdash 4s infinite 6s;
+          animation: animdash 4s infinite 6s;
+}
+
+@-webkit-keyframes animdash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes animdash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+.name-point {
+  -webkit-animation-delay: 6s;
+          animation-delay: 6s;
+}
+
+.double-down-arrows {
+  position: absolute;
+  left: 12%;
+  bottom: 5%;
+  z-index: 1;
+}
+
+.container__burger {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  left: -100%;
+}
+
+.header-container {
+  height: 100vh;
+  min-width: 0;
+}
+
+.header-swiper-slide {
+  height: 100%;
+  width: 100%;
+}
+.header-swiper-slide__north {
+  background: -o-radial-gradient(42.87% 49.23%, 62.09% 62.09%, rgba(34, 34, 34, 0.426517) 0%, #0f0f0f 100%), url(https://vl-shevchenko.github.io/gosurf/images/header/bg-airlie-beach.jpg);
+  background: radial-gradient(62.09% 62.09% at 42.87% 49.23%, rgba(34, 34, 34, 0.426517) 0%, #0f0f0f 100%), url(https://vl-shevchenko.github.io/gosurf/images/header/bg-airlie-beach.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.header-swiper-slide__south {
+  background: -o-radial-gradient(42.87% 49.23%, 62.09% 62.09%, rgba(34, 34, 34, 0.426517) 0%, #0f0f0f 100%), url(https://vl-shevchenko.github.io/gosurf/images/header/bg-beach.png);
+  background: radial-gradient(62.09% 62.09% at 42.87% 49.23%, rgba(34, 34, 34, 0.426517) 0%, #0f0f0f 100%), url(https://vl-shevchenko.github.io/gosurf/images/header/bg-beach.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.header-swiper-slide__west {
+  background: -o-radial-gradient(42.87% 49.23%, 62.09% 62.09%, rgba(34, 34, 34, 0.426517) 0%, #0f0f0f 100%), url(https://vl-shevchenko.github.io/gosurf/images/header/bg-coud-nine.jpg);
+  background: radial-gradient(62.09% 62.09% at 42.87% 49.23%, rgba(34, 34, 34, 0.426517) 0%, #0f0f0f 100%), url(https://vl-shevchenko.github.io/gosurf/images/header/bg-coud-nine.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.header-swiper-slide__east {
+  background: -o-radial-gradient(42.87% 49.23%, 62.09% 62.09%, rgba(34, 34, 34, 0.426517) 0%, #0f0f0f 100%), url(https://vl-shevchenko.github.io/gosurf/images/header/bg-malibu-beachjpg.jpeg);
+  background: radial-gradient(62.09% 62.09% at 42.87% 49.23%, rgba(34, 34, 34, 0.426517) 0%, #0f0f0f 100%), url(https://vl-shevchenko.github.io/gosurf/images/header/bg-malibu-beachjpg.jpeg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.header-swiper-slide__info-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  position: absolute;
+  bottom: 20%;
+  right: 5%;
+}
+.header-swiper-slide__title {
+  font-weight: 800;
+  font-size: 80px;
+  line-height: 108%;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+  text-align: right;
+}
+
+.container-wrapper {
+  background: -o-radial-gradient(42.87% 49.23%, 62.09% 62.09%, rgba(34, 34, 34, 0.426517) 0%, #0f0f0f 100%);
+  background: radial-gradient(62.09% 62.09% at 42.87% 49.23%, rgba(34, 34, 34, 0.426517) 0%, #0f0f0f 100%);
+}
+
+.title-header {
+  margin-bottom: 20px;
+}
+
+.swiper {
+  height: 100%;
+  width: 100%;
+  z-index: auto;
+}
+.swiper .swiper-wrapper {
+  width: 100%;
+}
+
+.swiper-slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.swiper-dots-container {
+  max-width: 900px;
+  width: 100%;
+  height: 55px;
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.dots-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 200px;
+  min-width: 0;
+  width: 100%;
+  border-top: solid 4px #ffffff;
+  padding-top: 6px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.dots-wrapper__number {
+  font-size: 20px;
+  font-weight: 800;
+}
+.dots-wrapper__item {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.mySwiper .swiper-slide-thumb-active {
+  opacity: 1;
+}
+.mySwiper .swiper-slide-thumb-active .dots-wrapper {
+  border-top: solid 4px #4af6cd;
+}
+
+.arrow-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  width: 75px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  top: 5%;
+  right: 5%;
+}
+
+.swiper-arrow-slider {
+  z-index: 10;
+  cursor: pointer;
+}
+
+.swiper-arrow-prev {
+  -webkit-transform: rotate(-180deg);
+      -ms-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+}
+
+.header__asside {
+  position: absolute;
+  overflow: auto;
+  left: 0;
+  top: 0;
+  border-right: solid 1px rgba(255, 255, 255, 0.25);
+  height: 100vh;
+  z-index: 50;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 3%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__asside::-webkit-scrollbar {
+  width: 4px;
+}
+
+.header__asside::-webkit-scrollbar-track {
+  border-radius: 2px;
+}
+
+.header__asside::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2509803922);
+  border-radius: 2px;
+}
+
+.header__asside::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.5019607843);
+}
+
+.logo-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+.logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #fff;
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
+}
+.logo__title {
+  font-weight: 800;
+  font-size: 60px;
+  text-transform: uppercase;
+  line-height: 143%;
+  color: #fff;
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+  -webkit-transform: rotate(-180deg);
+      -ms-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.logo__title-span {
+  position: relative;
+  background-color: rgba(75, 247, 206, 0.2509803922);
+  padding: 20px 35px;
+  margin-top: 5px;
+  margin-top: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.logo__title-span::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  width: 1px;
+  height: 20px;
+  top: -10px;
+  background-color: #fff;
+}
+
+.nav-bar {
+  padding-top: 10%;
+}
+.nav-bar__unlist {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+}
+.nav-bar__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 3px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.nav-bar__link {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 8px;
+}
+
+.header-search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.header-date {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+.header-date__day {
+  font-weight: 800;
+  font-size: 72px;
+  line-height: 89%;
+}
+.header-date__year {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 1.4px;
+}
+
+.header-location {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: 300;
+  font-size: 12px;
+  letter-spacing: 1.05px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 10px;
+}
+.header-location::before {
+  content: "";
+  background-image: url(https://vl-shevchenko.github.io/gosurf/images/header/nav-point.svg);
+  width: 11px;
+  height: 13px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 7px;
+}
+
+.world-map-wrapper {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 10% auto 60px;
+  max-width: 1200px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.world-map {
+  width: 100%;
+  max-width: 1280px;
+  min-width: 250px;
+  height: auto;
+  max-height: 634px;
+  min-height: 100px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.coordinates-containr {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: absolute;
+  top: calc(50% - 187.5px);
+  right: 1%;
+  gap: 20px;
+}
+
+.coordinates-beach {
+  -webkit-transform: rotate(-180deg);
+      -ms-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+  text-transform: uppercase;
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 8px;
+  white-space: nowrap;
+  opacity: 0.5;
+}
+
+.dots-beach-mobile-info__wrapper {
+  position: absolute;
+  padding: 24px 32px;
+  gap: 15px;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  height: 216px;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(15, 16, 16, 0.768627451)), to(transparent));
+  background: -o-linear-gradient(top, rgba(15, 16, 16, 0.768627451) 0%, transparent 100%);
+  background: linear-gradient(to bottom, rgba(15, 16, 16, 0.768627451) 0%, transparent 100%);
+  top: -223px;
+}
+.dots-beach-mobile-info__location-name {
+  position: relative;
+  font-size: 18px;
+  line-height: 22px;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-bottom: 5px;
+}
+.dots-beach-mobile-info__location-name::after {
+  content: "";
+  position: absolute;
+  width: 17px;
+  height: 14px;
+  top: calc(50% - 7px);
+  background-image: url(https://vl-shevchenko.github.io/gosurf/images/arrow-right.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  right: 0;
+}
+.dots-beach-mobile-info__location-city {
+  position: relative;
+  font-size: 16px;
+  line-height: 32px;
+  text-transform: capitalize;
+}
+.dots-beach-mobile-info__location-city::after {
+  content: "";
+  position: absolute;
+  background: #4af6cd;
+  width: 80px;
+  height: 1px;
+  left: 0;
+}
+.dots-beach-mobile-info__weather {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+.dots-beach-mobile-info__weather-wave {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: 800;
+  font-size: 16px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 12px 0 8px 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.dots-beach-mobile-info__weather-wave::before {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 25px;
+  top: 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-transform: translateY(-100%);
+      -ms-transform: translateY(-100%);
+          transform: translateY(-100%);
+  background-image: url(https://vl-shevchenko.github.io/gosurf/images/surf/info-beach/wave.svg);
+}
+.dots-beach-mobile-info__weather-wave::after {
+  content: "Surf (FT)";
+  position: absolute;
+  font-weight: 300;
+  font-size: 10px;
+  line-height: 12px;
+  text-transform: uppercase;
+  -webkit-transform: translateY(100%);
+      -ms-transform: translateY(100%);
+          transform: translateY(100%);
+  white-space: nowrap;
+  bottom: 0;
+}
+.dots-beach-mobile-info__weather-water {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: 800;
+  font-size: 16px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 12px 0 8px 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.dots-beach-mobile-info__weather-water::before {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 25px;
+  top: 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-transform: translateY(-100%);
+      -ms-transform: translateY(-100%);
+          transform: translateY(-100%);
+  background-image: url(https://vl-shevchenko.github.io/gosurf/images/surf/info-beach/water.svg);
+}
+.dots-beach-mobile-info__weather-water::after {
+  content: "Tide (FT)";
+  position: absolute;
+  font-weight: 300;
+  font-size: 10px;
+  line-height: 12px;
+  text-transform: uppercase;
+  -webkit-transform: translateY(100%);
+      -ms-transform: translateY(100%);
+          transform: translateY(100%);
+  white-space: nowrap;
+  bottom: 0;
+}
+.dots-beach-mobile-info__weather-wind {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: 800;
+  font-size: 16px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 12px 0 8px 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.dots-beach-mobile-info__weather-wind::before {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 25px;
+  top: 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-transform: translateY(-100%);
+      -ms-transform: translateY(-100%);
+          transform: translateY(-100%);
+  background-image: url(https://vl-shevchenko.github.io/gosurf/images/surf/info-beach/wind.svg);
+}
+.dots-beach-mobile-info__weather-wind::after {
+  content: "Wind (KTS)";
+  position: absolute;
+  font-weight: 300;
+  font-size: 10px;
+  line-height: 12px;
+  text-transform: uppercase;
+  -webkit-transform: translateY(100%);
+      -ms-transform: translateY(100%);
+          transform: translateY(100%);
+  white-space: nowrap;
+  bottom: 0;
+}
+
+.dots-beach-wrapper {
+  position: relative;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  top: -6px;
+  left: 220px;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.dots-beach {
+  position: absolute;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  background-color: #4af6cd;
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  -webkit-transition: all 0.7s;
+  -o-transition: all 0.7s;
+  transition: all 0.7s;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  z-index: 1;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+.dots-beach:hover {
+  -webkit-box-shadow: 0px 0px 35px rgba(74, 246, 205, 0.837777);
+          box-shadow: 0px 0px 35px rgba(74, 246, 205, 0.837777);
+}
+.dots-beach.active {
+  border-radius: 60% 5% 60% 70%;
+  z-index: 2;
+}
+
+.dots-beach:nth-child(4).active > .dots-beach-wrapper {
+  top: 95px;
+  left: 320px;
+}
+
+.dots-beach:nth-child(11).active > .dots-beach-wrapper {
+  top: -101px;
+  left: 122px;
+}
+
+.hanalei-beach {
+  top: 54%;
+  left: 0;
+}
+
+.malibu-beach {
+  top: 44%;
+  left: 11%;
+}
+
+.cocoa-beach {
+  top: 50%;
+  left: 28%;
+}
+
+.copacabana-beach {
+  top: 79%;
+  left: 34%;
+}
+
+.vieux-boucau {
+  top: 33%;
+  left: 45%;
+}
+
+.jeffreys-bay-beach {
+  top: 86%;
+  left: 53%;
+}
+
+.hikkaduwa-beach {
+  top: 62%;
+  left: 68%;
+}
+
+.airlie-beach {
+  top: 73%;
+  left: 89%;
+  z-index: 1;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.slider-box {
+  position: relative;
+  margin: 0 auto;
+  display: table;
+  overflow: hidden;
+  max-width: 390px;
+  width: 100%;
+  min-height: 750px;
+  background: rgba(28, 33, 33, 0.8039215686);
+  -webkit-transition: all 2s;
+  -o-transition: all 2s;
+  transition: all 2s;
+}
+.slider-box:hover {
+  background: rgba(28, 33, 33, 0.062745098);
+}
+.slider-box:hover .slider-box__btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.slider-box__inner-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  z-index: -1;
+}
+.slider-box__beach-name {
+  position: absolute;
+  height: 72px;
+  left: 10%;
+  right: 54.1%;
+  top: 12%;
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 36px;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-align: left;
+}
+.slider-box__location {
+  position: absolute;
+  left: 10%;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+  color: #ffffff;
+  -webkit-transform: rotate(-180deg);
+      -ms-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+  bottom: 12%;
+  white-space: nowrap;
+}
+.slider-box__location-span {
+  font-weight: 250;
+}
+.slider-box__btn {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.swiper-slide-active .slider-box {
+  background: rgba(28, 33, 33, 0.062745098);
+}
+.swiper-slide-active .slider-box .slider-box__btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.surf-title-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.title-surf-district {
+  position: relative;
+  padding-right: 30px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.title-surf-district::after {
+  position: absolute;
+  content: "|";
+  font-weight: 100;
+  font-size: inherit;
+  margin-left: 7px;
+}
+
+.dots-beach-info__wrapper {
+  position: relative;
+  padding: 24px 32px;
+  gap: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 283px;
+  height: 216px;
+  background: rgba(15, 16, 16, 0.768627451);
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
+  border-radius: 6px;
+}
+.dots-beach-info__location-name {
+  position: relative;
+  font-size: 18px;
+  line-height: 22px;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-bottom: 5px;
+}
+.dots-beach-info__location-name::after {
+  content: "";
+  position: absolute;
+  width: 17px;
+  height: 14px;
+  top: calc(50% - 7px);
+  background-image: url(https://vl-shevchenko.github.io/gosurf/images/arrow-right.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  right: 0;
+}
+.dots-beach-info__location-city {
+  position: relative;
+  font-size: 16px;
+  line-height: 32px;
+  text-transform: capitalize;
+}
+.dots-beach-info__location-city::after {
+  content: "";
+  position: absolute;
+  background: #4af6cd;
+  width: 80px;
+  height: 1px;
+  left: 0;
+}
+.dots-beach-info__weather {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+.dots-beach-info__weather-wave {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: 800;
+  font-size: 16px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 12px 0 8px 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.dots-beach-info__weather-wave::before {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 25px;
+  top: 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-transform: translateY(-100%);
+      -ms-transform: translateY(-100%);
+          transform: translateY(-100%);
+  background-image: url(https://vl-shevchenko.github.io/gosurf/images/surf/info-beach/wave.svg);
+}
+.dots-beach-info__weather-wave::after {
+  content: "Surf (FT)";
+  position: absolute;
+  font-weight: 300;
+  font-size: 10px;
+  line-height: 12px;
+  text-transform: uppercase;
+  -webkit-transform: translateY(100%);
+      -ms-transform: translateY(100%);
+          transform: translateY(100%);
+  white-space: nowrap;
+  bottom: 0;
+}
+.dots-beach-info__weather-water {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: 800;
+  font-size: 16px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 12px 0 8px 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.dots-beach-info__weather-water::before {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 25px;
+  top: 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-transform: translateY(-100%);
+      -ms-transform: translateY(-100%);
+          transform: translateY(-100%);
+  background-image: url(https://vl-shevchenko.github.io/gosurf/images/surf/info-beach/water.svg);
+}
+.dots-beach-info__weather-water::after {
+  content: "Tide (FT)";
+  position: absolute;
+  font-weight: 300;
+  font-size: 10px;
+  line-height: 12px;
+  text-transform: uppercase;
+  -webkit-transform: translateY(100%);
+      -ms-transform: translateY(100%);
+          transform: translateY(100%);
+  white-space: nowrap;
+  bottom: 0;
+}
+.dots-beach-info__weather-wind {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: 800;
+  font-size: 16px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 12px 0 8px 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.dots-beach-info__weather-wind::before {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 25px;
+  top: 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-transform: translateY(-100%);
+      -ms-transform: translateY(-100%);
+          transform: translateY(-100%);
+  background-image: url(https://vl-shevchenko.github.io/gosurf/images/surf/info-beach/wind.svg);
+}
+.dots-beach-info__weather-wind::after {
+  content: "Wind (KTS)";
+  position: absolute;
+  font-weight: 300;
+  font-size: 10px;
+  line-height: 12px;
+  text-transform: uppercase;
+  -webkit-transform: translateY(100%);
+      -ms-transform: translateY(100%);
+          transform: translateY(100%);
+  white-space: nowrap;
+  bottom: 0;
+}
+
+.slider__title-travel {
+  padding-right: 70px;
+}
+.slider__title-travel::after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 52px;
+  height: 42px;
+  background-image: url(https://vl-shevchenko.github.io/gosurf/images/travel/virgin.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.arrow-wrapper-travel {
+  top: 10%;
+  right: 0;
+}
+
+.total-price-travel::after {
+  content: "Round Trip";
+}
+
+.slider-calculator {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 15px;
+}
+.slider-calculator__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 15px;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+.slider-calculator__btn {
+  cursor: pointer;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 20px;
+  height: 20px;
+}
+.slider-calculator__plus::before {
+  position: absolute;
+  content: "";
+  width: 14px;
+  height: 2px;
+  background-color: #4af6cd;
+}
+.slider-calculator__plus::after {
+  position: absolute;
+  content: "";
+  width: 14px;
+  height: 2px;
+  background-color: #4af6cd;
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+.slider-calculator__minus::before {
+  position: absolute;
+  content: "";
+  width: 14px;
+  height: 2px;
+  background-color: #4af6cd;
+}
+
+.slider__infoblock-title-input {
+  width: 20%;
+  background: none;
+  border: none;
+  color: white;
+  text-align: right;
+  padding: 0;
+}
+
+.result-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.total-price::after {
+  content: "Per Night";
+}
+
+.shop__container {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 20px;
+}
+.shop__infoblock-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.shop__img-bg {
+  max-width: 1116px;
+  min-width: 240px;
+  width: 100%;
+  max-height: 780px;
+  min-height: 168px;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  right: 0;
+  z-index: -1;
+}
+.shop__title {
+  font-family: "Fira Sans";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 40px;
+  text-transform: uppercase;
+  margin-top: 3%;
+}
+.shop__price {
+  position: relative;
+  font-family: "Fira Sans";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 32px;
+  line-height: 125%;
+  text-transform: uppercase;
+}
+.shop__price::before {
+  position: absolute;
+  content: "★★★★★";
+  font-size: 80%;
+  left: 0;
+  bottom: 100%;
+  color: #4af6cd;
+  letter-spacing: 8px;
+  text-shadow: 0px 0px 16px rgba(74, 246, 205, 0.54);
+}
+.shop__price-cent {
+  font-family: "Fira Sans";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 222%;
+  text-transform: uppercase;
+}
+.shop__btn {
+  margin: 15% 0;
+}
+.shop__wrapper-image-product {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  max-width: 228px;
+  position: relative;
+  margin: 0px 152px 0 250px;
+}
+.shop__image-product {
+  width: 100%;
+  max-width: 228px;
+  min-width: 100px;
+  height: auto;
+  max-height: 695px;
+  min-height: 320px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.shop__dots {
+  cursor: pointer;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  z-index: 3;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+.shop__dots::before {
+  position: absolute;
+  content: "";
+  width: 12px;
+  height: 2px;
+  background-color: #4af6cd;
+}
+.shop__dots::after {
+  position: absolute;
+  content: "";
+  width: 12px;
+  height: 2px;
+  background-color: #4af6cd;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+.shop__dots:hover {
+  background-color: rgba(75, 247, 206, 0.2509803922);
+}
+.shop__dots:hover::before {
+  background-color: #ffffff;
+}
+.shop__dots:hover::after {
+  background-color: #ffffff;
+}
+.shop__dots-argument {
+  position: absolute;
+  display: none;
+  right: -100%;
+  font-family: "Fira Sans";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: #ffffff;
+  width: 255px;
+  max-width: 345px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding-right: 90px;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+.shop__dots-argument::before {
+  content: "";
+  position: absolute;
+  background: #ffffff;
+  opacity: 0.5;
+  width: 80px;
+  height: 1px;
+  top: 50%;
+  right: 0;
+}
+.shop__dots-argument-right {
+  padding-right: 0;
+  padding-left: 90px;
+}
+.shop__dots-argument-right::before {
+  right: auto;
+  left: 0;
+}
+.shop__extras {
+  margin-top: auto;
+}
+.shop__extras-title {
+  font-family: "Fira Sans";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 28px;
+  line-height: 143%;
+  text-transform: uppercase;
+  margin-bottom: 21px;
+  padding-left: 15px;
+}
+.shop__extras-container-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 65px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+.shop__extras-card-extras {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  width: 160px;
+  height: 210px;
+}
+.shop__extras-img-extras {
+  width: 103px;
+  height: 104px;
+  margin-bottom: 21px;
+}
+.shop__extras-name-card {
+  font-family: "Fira Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: right;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+}
+.shop__extras-prise-card {
+  font-family: "Fira Sans";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 222%;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.shop__dots-wrapper.active > .shop__dots::after {
+  -webkit-transform: rotate(0);
+      -ms-transform: rotate(0);
+          transform: rotate(0);
+}
+
+.shop__dots-wrapper.active > .shop__dots-argument {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.shop__dots-wrapper.active > .shop__dots-argument-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.shop-dots1 {
+  position: absolute;
+  top: 45%;
+  left: 1%;
+}
+
+.shop-dots2 {
+  position: absolute;
+  top: 80%;
+  left: 11%;
+}
+
+.shop-dots3 {
+  position: absolute;
+  top: 20%;
+  right: 12%;
+}
+
+.shop-argument1 {
+  position: absolute;
+  top: 45%;
+  right: 110%;
+}
+
+.shop-argument2 {
+  position: absolute;
+  top: 80%;
+  right: 100%;
+}
+
+.shop-argument3 {
+  position: absolute;
+  top: 20%;
+  left: 100%;
+}
+
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 30px;
+  margin: 200px 0 50px 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.footer__subtitle {
+  font-family: "Fira Sans";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 14px;
+  text-align: center;
+  letter-spacing: 1.05px;
+  text-transform: uppercase;
+  color: #ffffff;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+  margin: 0 auto;
+}
+
+.logo-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 217px;
+  height: 78px;
+}
+.logo-footer__title {
+  font-weight: 800;
+  font-size: 40px;
+  text-transform: uppercase;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+.logo-footer__title-span {
+  position: relative;
+  background-color: rgba(75, 247, 206, 0.2509803922);
+  padding: 15px 25px;
+  margin-left: 20px;
+}
+.logo-footer__title-span::before {
+  content: "";
+  position: absolute;
+  left: -10px;
+  width: 20px;
+  height: 1px;
+  top: 50%;
+  background-color: #fff;
+}
+
+@media (max-width: 1431px) {
+  .shop-dots3 {
+    left: 12%;
+  }
+  .shop-argument3 {
+    right: 100%;
+    left: auto;
+  }
+  .shop__dots-argument {
+    padding-right: 50px;
+    padding-left: 0;
+    max-width: 280px;
+  }
+  .shop__dots-argument::before {
+    right: 0;
+    left: auto;
+    width: 40px;
+  }
+}
+@media (max-width: 1280px) {
+  .swiper-dots-container {
+    max-width: 800px;
+  }
+  .dots-wrapper {
+    max-width: 160px;
+  }
+  .logo__title {
+    font-size: 40px;
+  }
+  .logo__title-span {
+    padding: 15px 25px;
+  }
+  .nav-bar__item {
+    font-size: 11px;
+  }
+  .nav-bar__ico {
+    width: 44px;
+    max-height: 44px;
+  }
+  .header-date__day {
+    font-weight: 500;
+    font-size: 52px;
+  }
+  .header-date__year {
+    font-size: 12px;
+  }
+  .header-location {
+    font-size: 10px;
+  }
+  .header-location::before {
+    width: 10px;
+    height: 11px;
+    margin-right: 5px;
+  }
+  .shop__dots-argument {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 120%;
+  }
+}
+@media (max-width: 1024px) {
+  .header__title {
+    width: 300px;
+    font-size: 120px;
+  }
+  .subtitle {
+    letter-spacing: 3px;
+    font-size: 12px;
+    padding-left: 45px;
+  }
+  .subtitle::before {
+    width: 30px;
+  }
+  .slider__subtitle {
+    padding-right: 45px;
+    padding-left: 0;
+  }
+  .slider__subtitle::before {
+    right: 0;
+    left: auto;
+  }
+  .subtitle-header {
+    font-size: 20px;
+  }
+  .header-swiper-slide__title {
+    font-size: 40px;
+  }
+  .title {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 150%;
+  }
+  .title-surf-district::after {
+    font-size: 24px;
+    margin-left: 10px;
+  }
+  .title-header {
+    font-size: 30px;
+    font-weight: 800;
+  }
+  .swiper-dots-container {
+    max-width: 600px;
+  }
+  .dots-wrapper {
+    max-width: 130px;
+  }
+  .dots-wrapper__number {
+    font-size: 15px;
+    font-weight: 500;
+  }
+  .dots-wrapper__item {
+    font-size: 15px;
+  }
+  .header__asside {
+    left: -100%;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+    height: calc(100% - 70px);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    background: rgba(20, 56, 47, 0.2509803922);
+    position: fixed;
+  }
+  .header__asside.open {
+    left: 0;
+    width: 50%;
+    margin-top: 70px;
+  }
+  .container__burger {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 70px;
+    top: 0;
+    left: 0;
+    background: rgba(20, 56, 47, 0.2509803922);
+    padding-left: 1%;
+    padding-right: 1%;
+    z-index: 100;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+    position: fixed;
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+  }
+  .container__burger.active {
+    padding-left: 51%;
+  }
+  .burger {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    width: 60px;
+    height: 50px;
+  }
+  .bar {
+    display: block;
+    width: 30px;
+    height: 2px;
+    margin: 5px auto;
+    background-color: #ffffff;
+    -webkit-transition: 0.2s;
+    -o-transition: 0.2s;
+    transition: 0.2s;
+  }
+  .burger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .burger.active .bar:nth-child(1) {
+    -webkit-transform: translateY(12px) rotate(45deg);
+        -ms-transform: translateY(12px) rotate(45deg);
+            transform: translateY(12px) rotate(45deg);
+  }
+  .burger.active .bar:nth-child(3) {
+    -webkit-transform: translateY(-12px) rotate(-45deg);
+        -ms-transform: translateY(-12px) rotate(-45deg);
+            transform: translateY(-12px) rotate(-45deg);
+  }
+  .logo {
+    padding-top: 10px;
+    width: 226px;
+    -webkit-backdrop-filter: none;
+            backdrop-filter: none;
+  }
+  .logo__title {
+    font-size: 40px;
+    -webkit-transform: rotate(0);
+        -ms-transform: rotate(0);
+            transform: rotate(0);
+    -webkit-writing-mode: horizontal-tb;
+        -ms-writing-mode: lr-tb;
+            writing-mode: horizontal-tb;
+  }
+  .logo__title-span {
+    margin-top: 0;
+    margin-left: 15px;
+  }
+  .logo__title-span::before {
+    top: 50%;
+    width: 20px;
+    height: 1px;
+    left: -10px;
+  }
+  .section-title {
+    font-weight: 800;
+    font-size: 50px;
+  }
+  .section-title::before {
+    width: 50px;
+  }
+  .section-title::after {
+    font-weight: 800;
+    font-size: 100px;
+    line-height: 78%;
+  }
+  .header__map-svg {
+    width: 60%;
+    height: 35%;
+    max-height: 340px;
+  }
+  .slider__title-wrapper {
+    margin-bottom: 70px;
+  }
+  .slider__title {
+    padding-right: 120%;
+  }
+  .slider__title-travel {
+    padding-right: 70px;
+  }
+  .slider__block-wrapper {
+    gap: 35px;
+  }
+  .slider__infoblock {
+    height: 120px;
+    width: 150px;
+    gap: 10px;
+  }
+  .slider__infoblock-title {
+    font-size: 18px;
+    font-weight: 500;
+  }
+  .slider__infoblock-subtitle {
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 4px;
+  }
+  .slider__result:after {
+    font-weight: 200;
+    font-size: 10px;
+    letter-spacing: 2px;
+  }
+  .btn-box__title {
+    font-size: 25px;
+    height: 60px;
+  }
+  .shop__title {
+    font-size: 25px;
+    font-weight: 600;
+  }
+  .shop__wrapper-image-product {
+    max-width: 200px;
+    margin: 0 5% 0 60%;
+  }
+  .double-down-arrows {
+    display: none;
+  }
+  .shop__wrapper-image-product {
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+  }
+  .shop__img-bg {
+    top: 10%;
+  }
+}
+@media (max-width: 853px) {
+  .coordinates-containr {
+    display: none;
+  }
+  .dots-beach-mobile-info__wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .world-map-wrapper {
+    margin: 300px auto 60px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .dots-beach-wrapper {
+    display: none;
+  }
+  .section-wrapper {
+    margin: 80px auto;
+  }
+}
+@media (max-width: 759px) {
+  .swiper-dots-container {
+    display: none;
+  }
+}
+@media (max-width: 690px) {
+  .shop__infoblock-wrapper {
+    width: 100%;
+  }
+  .shop__btn {
+    margin: 15% auto;
+  }
+}
+@media (max-width: 640px) {
+  .shop__dots-argument {
+    font-size: 14px;
+    padding-right: 30px;
+    max-width: 183px;
+  }
+  .shop__dots-argument::before {
+    width: 20px;
+  }
+}
+@media (max-width: 480px) {
+  .logo {
+    display: none;
+  }
+  .header__map-svg {
+    width: 90%;
+    height: 35%;
+  }
+  .slider__title {
+    padding-right: 0;
+  }
+  .slider__title-travel {
+    padding-right: 70px;
+  }
+  .slider__title::after {
+    right: 0;
+    left: 0;
+    bottom: -80%;
+  }
+  .slider__title-travel::after {
+    left: auto;
+  }
+}
+@media (max-width: 414px) {
+  .header__title {
+    display: none;
+  }
+}
+@media (max-width: 375px) {
+  .header__map-svg {
+    display: none;
+  }
+  .title-surf-district {
+    font-size: 17px;
+  }
+  .title-surf-country {
+    font-size: 17px;
+  }
+}
+@media (max-width: 320px) {
+  .shop__dots-argument {
+    padding-right: 20px;
+    max-width: 155px;
+  }
+  .shop__dots-argument::before {
+    width: 15px;
+  }
+  .shop-argument1 {
+    right: 102%;
+  }
+  .shop-argument2 {
+    right: 95%;
+  }
+  .shop-argument3 {
+    right: 95%;
+  }
+}
